@@ -31,6 +31,7 @@ class Player{
                   void upgrade Speed();
                   void upgrade Health();
                   void increaseHealthlevel(int amount);
+                int getHealth();
 };
 
 
