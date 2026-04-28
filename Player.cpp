@@ -40,6 +40,23 @@ Vector 2f Player:: getCenter(){
 void Player :: getHealth(){
   m_LeftPressed=true;
 }
+void Player :: move Right(){
+  m_RightPressed=true;
+}
+void Player :: move Up(){
+  m_UpPressed=true;
+}
+void Player :: move Down(){
+  m_DownPressed=true;
+}
+void Player :: update(float elapsedTime,Vector2i mousePosition){
+  if(m_UpPressed){
+    m_Position.y=m_Position.y-m_Speed *elapsedTime;
+  }
+void Player :: update(float elapsedTime,Vector2i mousePosition){
+  if(m_UpPressed){
+    m_Position.y=m_Position.y-m_Speed *elapsedTime;
+  }
 
 
 
