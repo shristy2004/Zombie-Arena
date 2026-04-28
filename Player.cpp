@@ -54,9 +54,16 @@ void Player :: update(float elapsedTime,Vector2i mousePosition){
     m_Position.y=m_Position.y-m_Speed *elapsedTime;
   }
 void Player :: update(float elapsedTime,Vector2i mousePosition){
-  if(m_UpPressed){
-    m_Position.y=m_Position.y-m_Speed *elapsedTime;
+  if(m_RightPressed){
+    m_Position.x+=Speed *elapsedTime;
   }
+void Player :: update(float elapsedTime,Vector2i mousePosition){
+  if(m_LeftPressed){
+    m_Position.x -= Speed *elapsedTime;
+  }
+m_Sprite.setPosition(m_Position);
+  
+
 
 
 
