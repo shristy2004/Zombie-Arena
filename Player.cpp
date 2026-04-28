@@ -25,7 +25,25 @@ Time Player :: getHitTime(){
 bool Player :: hit(Time timeHit){
   if(timeHit.asMilliseconds()-m_lastHit.asmiliseconds()>200){
 m_lastHit=timeHit;
-m_Health=m_Health
+m_Health=m_Health-10;
+return true;
+  }
+else{
+return false;
+}}}
+FloatRect Player :: getPosition(){
+  return m_Sprite.getGlobalBounds();
+}
+Vector 2f Player:: getCenter(){
+  Sprite int Player :: getCenter(){
+    Sprite 
+void Player :: getHealth(){
+  m_LeftPressed=true;
+}
+
+
+
+
 
 
 
