@@ -16,3 +16,13 @@ private:
 	float m_MinX;
 	float m_MaxY;
 	float m_MinY;
+public:
+	Bullet();
+	void stop();
+	bool isInFlight();
+	void shoot(float startX, float startY,float xTarget, float yTarget);
+	FloatRect getPosition();
+	RectangleShape getShape();
+	void update(float elapsedTime);
+
+};
