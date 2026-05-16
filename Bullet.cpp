@@ -54,3 +54,36 @@ if (gradient < 0)
 	{
 		m_BulletDistanceY *= -1;
 	}
+// Set a max range of 1000 pixels
+	float range = 1000;
+	m_MinX = startX - range;
+	m_MaxX = startX + range;
+	m_MinY = startY - range;
+	m_MaxY = startY + range;
+	
+	// Position the bullet ready to be drawn
+	m_BulletShape.setPosition(m_Position);
+}
+void Bullet::stop()
+{
+	m_InFlight = false;
+}
+
+bool Bullet::isInFlight()
+{
+	return m_InFlight;
+}
+
+FloatRect Bullet::getPosition()
+{
+	return m_BulletShape.getGlobalBounds();
+}
+
+RectangleShape Bullet::getShape()
+{
+	return m_BulletShape;
+}
+
+
+void Bullet::update(float elapsedTime)
+{
