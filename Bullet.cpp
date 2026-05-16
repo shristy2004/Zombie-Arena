@@ -36,3 +36,21 @@ void Bullet::shoot(float startX, float startY,float targetX, float targetY)
 	m_Position.x = startX;
 	m_Position.y = startY;
 	float gradient = (startX - targetX) / (startY - targetY);
+if (gradient < 0)
+	{
+		gradient *= -1;
+	}
+	m_BulletDistanceY=m_BulletSpeed/(1+gradient);
+	m_BulletDistanceX=m_BulletSpeed*(gradient/(1+gradient));
+	//float ratioXY = m_BulletSpeed / (1 + gradient);
+
+//	m_BulletDistanceY = m_BulletSpeed*(1/1+;m_BulletDistanceX = ratioXY * gradient;
+	if (targetX < startX)
+	{
+		m_BulletDistanceX *= -1;
+	}
+
+	if (targetY < startY)
+	{
+		m_BulletDistanceY *= -1;
+	}
