@@ -26,3 +26,7 @@ public:
 	void update(float elapsedTime);
 
 };
+Bullet::Bullet()   // Bullet b;
+{
+	m_BulletShape.setSize(sf::Vector2f(20, 20));
+}
