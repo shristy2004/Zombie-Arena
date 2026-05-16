@@ -30,3 +30,5 @@ Bullet::Bullet()   // Bullet b;
 {
 	m_BulletShape.setSize(sf::Vector2f(20, 20));
 }
+void Bullet::shoot(float startX, float startY,float targetX, float targetY)
+{
