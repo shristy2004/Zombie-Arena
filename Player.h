@@ -11,7 +11,7 @@ class Player{
         bool m_UpPressed,m_leftPressed,m_DownPressed,
         int m_Health;
         int m_maxHealth;
-        Time m_Lasthit;//when was the player last hit by the zombie//
+        Time m_Lasthit;//when was the player last hit by the zombie in the game//
         float m_Speed;//speed in pixel per seconds//
         public:
         Player();
